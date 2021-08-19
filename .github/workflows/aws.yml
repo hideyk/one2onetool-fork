@@ -58,7 +58,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: react-task-definition.json
+        task-definition: react-release.json
         container-name: one2onetool-container
         image: ${{ steps.build-image.outputs.image }}
 

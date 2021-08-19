@@ -3,6 +3,9 @@ FROM node:16
 # Setting working directory.
 WORKDIR /usr/src/app
 
+# Set environment variable for JSON data file
+ENV DATA_FILE="Questions.json"
+
 # Installing dependencies
 COPY package*.json ./
 RUN npm ci --silent

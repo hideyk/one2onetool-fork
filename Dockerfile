@@ -5,13 +5,12 @@ WORKDIR /usr/src/app
 
 # Installing dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci --silent
 
 # Copying source files
 COPY . .
 
-# Test application
-RUN npm run test
+EXPOSE 80 3000
 
 # Running the app 
 CMD [ "npm", "start" ]

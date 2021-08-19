@@ -4,7 +4,7 @@ FROM node:16
 WORKDIR /usr/src/app
 
 # Set environment variable for JSON data file
-ENV DATA_FILE="Questions.json"
+ENV DATA_FILE="Questions-test.json"
 
 # Installing dependencies
 COPY package*.json ./

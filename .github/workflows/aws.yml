@@ -1,8 +1,8 @@
 on:
   push:
-    branches: [ release ]
+    branches: [ staging ]
   pull_request:
-    branches: [ release ]
+    branches: [ staging ]
 
 
 name: Deploy to Amazon ECS
@@ -44,7 +44,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: one2onetool-release
+        ECR_REPOSITORY: one2onetool-staging
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
@@ -58,7 +58,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: react-release.json
+        task-definition: react-staging.json
         container-name: one2onetool-container
         image: ${{ steps.build-image.outputs.image }}
 

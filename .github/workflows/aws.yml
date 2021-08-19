@@ -21,7 +21,7 @@ jobs:
       - run: npm test
 
   deploy:
-    name: Deploy
+    name: Deploy to ECS
     runs-on: ubuntu-latest
     environment: production
 

@@ -88,6 +88,9 @@ To get started, we are required to create the following services to enable conta
 - ECS Container definition
 
 Starting with the ECR repositories, we can access `Amazon Container Services > Amazon ECR > Repositories` then create the required repositories (one2onetool-release & one2onetool-staging).
+![](img/one2onetool-ecr.PNG)
+
+<br>
 
 As for the last four items, we can use the [managed AWS ECS Getting started guide](https://us-east-1.console.aws.amazon.com/ecs/home?region=us-east-1#/firstRun) to create our services and allow them to integrate seamlessly. 
 
@@ -117,12 +120,25 @@ For the AWS secrets, we may use the access key and secret access key provided up
 
 For the email password, we're required to create an `APP Password` which is different from our user password. You may follow steps [here](https://support.google.com/mail/answer/185833?hl=en) to create it. 
 
+**Github actions (React Test)**
+![](img/githubactions-test.PNG)
+
+**Github actions (Deploy to Amazon ECS)**
+![](img/githubactions-deploy.PNG)
+
+
 <br>
 
 ### Trigger our CI/CD pipeline
 
 Finally, our CI/CD pipeline is ready. 
 Proceed to push changes to the react application and watch the 'magic' happen. :)
+
+**ECS Service deployment successful**
+![](img/one2onetool-cluster.PNG)
+
+**One2onetool website deployed**
+![](img/one2onetool-website.PNG)
 
 <br>
 

@@ -122,7 +122,7 @@ For the email password, we're required to create an `APP Password` which is diff
 
 **Github actions (React Test)**
 ![](img/githubactions-test.PNG)
-
+ 
 **Github actions (Deploy to Amazon ECS)**
 ![](img/githubactions-deploy.PNG)
 
